@@ -4,12 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class welcome extends AppCompatActivity implements View.OnClickListener {
 
@@ -32,7 +28,7 @@ public class welcome extends AppCompatActivity implements View.OnClickListener {
         Intent intent;
 
         if(v.getId() == R.id.lsbridge){
-            intent = new Intent(this, loginsignup.class);
+            intent = new Intent(this, login.class);
             startActivity(intent);
         }
 
