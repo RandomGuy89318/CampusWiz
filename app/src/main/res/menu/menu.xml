@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:icon="@drawable/homeicon"
+        android:id="@+id/home"/>
+
+    <item android:title="Study Planner"
+        android:icon="@drawable/quill_svgrepo_com"
+        android:id="@+id/splanner"/>
+
+    <item android:title="Resources"
+        android:icon="@drawable/resourceicon"
+        android:id="@+id/resources"/>
+</menu>
