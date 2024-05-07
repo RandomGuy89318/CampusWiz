@@ -18,6 +18,15 @@
         <activity android:name=".signup"
             android:exported="false" />
         <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".faverify"
+            android:exported="false" />
+        <activity
+            android:name=".forgotacct"
+            android:exported="false" />
+        <activity
             android:name=".login"
             android:exported="false" />
         <activity
