@@ -30,6 +30,8 @@ public class login extends AppCompatActivity {
     private EditText Password;
     private CardView loginButton;
 
+    private TextView forgopas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,10 +105,23 @@ public class login extends AppCompatActivity {
                 openactivity_signup();
             }
         });
+
+        TextView forgopas = findViewById(R.id.forgotpass);
+        forgopas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openactivity_forgotacct();
+            }
+        });
     }
 
     public void openactivity_signup() {
         Intent intent = new Intent(this, signup.class);
+        startActivity(intent);
+    }
+
+    public void openactivity_forgotacct() {
+        Intent intent = new Intent(this, forgotacct.class);
         startActivity(intent);
     }
 

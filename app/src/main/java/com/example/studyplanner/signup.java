@@ -36,7 +36,6 @@ public class signup extends AppCompatActivity {
         EditText txt_email= findViewById(R.id.email);
         TextView btn_sign_in= findViewById(R.id.btn_sign_in);
         CardView btn_sign_up=findViewById(R.id.btn_sign_up);
-        EditText errorhehe=findViewById(R.id.error);
         EditText error=findViewById(R.id.error2);
 
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +75,7 @@ public class signup extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         // textView.setText("That didn't work!");
-                        errorhehe.setText(error.toString());
+
 
                     }
                 }){
