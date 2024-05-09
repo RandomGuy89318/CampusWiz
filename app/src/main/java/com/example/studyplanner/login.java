@@ -55,25 +55,22 @@ public class login extends AppCompatActivity {
                                 @Override
                                 public void onResponse(String response) {
                                     try {
-                                        JSONArray jsonArray = new JSONArray(response);
-                                        for (int i = 0; i < jsonArray.length(); i++) {
-                                            JSONObject jsonObject = jsonArray.getJSONObject(i);
-                                            String user_name = jsonObject.getString("username");
-                                            String user_pass = jsonObject.getString("password");
+                                        JSONObject jsonResponse = new JSONObject(response);
+                                        String user_name = jsonResponse.getString("Name");
+                                        String user_pass = jsonResponse.getString("Password");
 
-                                            if (user_name.equals(username) && user_pass.equals(password)) {
-                                                // If match, navigate to another activity
-                                                Intent intent = new Intent(login.this, welcome.class);
-                                                startActivity(intent);
-                                                finish(); // Finish current activity
-                                            } else {
-                                                // If not match, display an error message
-                                                Toast.makeText(login.this, "Wrong Username or Password", Toast.LENGTH_SHORT).show();
-                                            }
+                                        if (user_name.equals(username) && user_pass.equals(password)) {
+                                            // If match, navigate to another activity
+                                            Intent intent = new Intent(login.this, Home.class);
+                                            startActivity(intent);
+                                            finish(); // Finish current activity
+                                            return; // Exit the method after successful login
                                         }
-                                    } catch (JSONException e) {
+                                        // If credentials don't match, display an error message
                                         Toast.makeText(login.this, "Wrong Username or Password", Toast.LENGTH_SHORT).show();
-                                        e.printStackTrace();
+                                    } catch (JSONException e) {
+                                        // If an error occurs while parsing JSON response, display an error message
+                                        Toast.makeText(login.this, "Wrong Username or Password", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             },
