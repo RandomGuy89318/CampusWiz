@@ -12,11 +12,21 @@ import com.example.studyplanner.databinding.ActivityHomeBinding;
 import com.google.android.material.navigation.NavigationView;
 
 public class Home extends AppCompatActivity {
+
+
     ActivityHomeBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_home);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.mainframe, new mdisp_frag())
+                    .commit();
+        }
 
         // Inflate the binding layout and set content view
         binding = ActivityHomeBinding.inflate(getLayoutInflater());

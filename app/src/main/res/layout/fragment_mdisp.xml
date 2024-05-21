@@ -13,4 +13,13 @@
         android:gravity="center"
         android:text="Main Display" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Verify Email"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:background="@drawable/gradientbgbtn"/>
+
 </FrameLayout>

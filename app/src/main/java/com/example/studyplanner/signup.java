@@ -75,8 +75,6 @@ public class signup extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         // textView.setText("That didn't work!");
-
-
                     }
                 }){
                     protected Map<String, String> getParams(){

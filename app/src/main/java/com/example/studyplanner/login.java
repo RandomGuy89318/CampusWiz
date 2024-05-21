@@ -3,6 +3,7 @@ package com.example.studyplanner;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,17 +30,25 @@ public class login extends AppCompatActivity {
     private EditText Username;
     private EditText Password;
     private CardView loginButton;
-
+    private CheckBox checkbox_btn;
     private TextView forgopas;
+    private SessionManager sessionManager; // Add SessionManager
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Initialize SessionManager
+        sessionManager = new SessionManager(this);
+
         Username = findViewById(R.id.uname);
         Password = findViewById(R.id.pword);
         loginButton = findViewById(R.id.btn_sign_in);
+        checkbox_btn = findViewById(R.id.checkBox);
+
+        // Set checkbox state based on Remember Me flag in SessionManager
+        checkbox_btn.setChecked(sessionManager.getRememberMe());
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +75,13 @@ public class login extends AppCompatActivity {
                                             Intent intent = new Intent(login.this, Home.class);
                                             startActivity(intent);
                                             finish(); // Finish current activity
+
+                                            // Store Remember Me preference if checkbox is checked
+                                            if (checkbox_btn.isChecked()) {
+                                                sessionManager.setRememberMe(true);
+                                            } else {
+                                                sessionManager.setRememberMe(false);
+                                            }
                                             return; // Exit the method after successful login
                                         }
                                         // If credentials don't match, display an error message

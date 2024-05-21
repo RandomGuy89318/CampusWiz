@@ -1,7 +1,9 @@
 package com.example.studyplanner;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,6 +16,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class mdisp_frag extends Fragment {
+
+    private AppCompatButton verify_btn;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,7 +40,6 @@ public class mdisp_frag extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment mdisp.
      */
-    // TODO: Rename and change types and number of parameters
     public static mdisp_frag newInstance(String param1, String param2) {
         mdisp_frag fragment = new mdisp_frag();
         Bundle args = new Bundle();
@@ -59,6 +62,24 @@ public class mdisp_frag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mdisp, container, false);
+        View view = inflater.inflate(R.layout.fragment_mdisp, container, false);
+
+        // Initialize the button
+        verify_btn = view.findViewById(R.id.verify);
+
+        // Set the click listener for the button
+        verify_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openactivity_faverify();
+            }
+        });
+
+        return view;
+    }
+
+    public void openactivity_faverify() {
+        Intent intent = new Intent(getActivity(), faverify.class);
+        startActivity(intent);
     }
 }
