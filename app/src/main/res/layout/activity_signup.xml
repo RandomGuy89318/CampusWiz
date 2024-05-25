@@ -236,10 +236,12 @@
 
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btn_sign_up"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:clickable="true"
                 android:background="@drawable/gradientbg"
                 app:cardCornerRadius="25dp">
 
@@ -262,6 +264,11 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+            <EditText
+                android:id="@+id/error2"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
 
             <LinearLayout
@@ -277,11 +284,13 @@
                     android:text="Already have an Account?"/>
 
                 <TextView
+                    android:id="@+id/btn_sign_in"
                     android:layout_marginTop="5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sign In"
+                    android:clickable="true"
                     android:textStyle="bold"
                     android:textColor="#50C878"/>
 

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradientbg"
+    tools:context=".mdisp_frag">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_margin="20dp">
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#D0F7E2"
+               app:cardCornerRadius="15dp"
+               >
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:layout_margin="20dp">
+
+                       <TextView
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:text="BASIC PROGRAMMING"
+                           android:textStyle="bold"
+                           android:layout_weight="0.8"/>
+
+                       <ImageView
+                           android:layout_width="0dp"
+                           android:layout_height="25dp"
+                           android:src="@drawable/sparkles_svgrepo_com"
+                           android:layout_weight="0.2"/>
+
+                   </LinearLayout>
+
+                   <ProgressBar
+                       android:padding="10dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                       android:progressDrawable="@drawable/pbbackground"
+                       android:progress="75"
+                       android:max="100"/>
+
+               </LinearLayout>
+
+
+
+
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#D0F7E7"
+               app:cardCornerRadius="15dp"
+               android:layout_marginTop="20dp"
+               >
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:layout_margin="20dp">
+
+                       <TextView
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:text="DERAVATIVES"
+                           android:textStyle="bold"
+                           android:layout_weight="0.8"/>
+
+                       <ImageView
+                           android:layout_width="0dp"
+                           android:layout_height="25dp"
+                           android:src="@drawable/sparkles_svgrepo_com"
+                           android:layout_weight="0.2"/>
+
+                   </LinearLayout>
+
+                   <ProgressBar
+                       android:padding="10dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                       android:progressDrawable="@drawable/pbbackground"
+                       android:progress="32"
+                       android:max="100"/>
+
+               </LinearLayout>
+
+
+
+
+
+           </androidx.cardview.widget.CardView>
+
+       </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</FrameLayout>

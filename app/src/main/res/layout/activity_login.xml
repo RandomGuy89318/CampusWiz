@@ -127,6 +127,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/forgotpass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Forgot Password?"
@@ -138,7 +139,9 @@
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btn_sign_in"
                 android:layout_marginTop="15dp"
+                android:clickable="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -170,6 +173,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+
 
 
                 <TextView
@@ -229,13 +233,17 @@
                     android:text="Don't have an Account?"/>
 
                 <TextView
+                    android:id="@+id/btn_sign_up"
                     android:layout_marginTop="5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sign Up"
+                    android:clickable="true"
+                    android:onClick="openactivity_signup"
                     android:textStyle="bold"
                     android:textColor="#50C878"/>
+
 
             </LinearLayout>
 

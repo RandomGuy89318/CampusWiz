@@ -3,14 +3,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradientbgwc"
     tools:context=".resources_frag">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Resources" />
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:id="@+id/uploadfile"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/upload_file_svgrepo_com"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Upload Resources \n (pdf,text,docx)"
+                android:fontFamily="@font/nunito"
+                android:layout_below="@id/uploadfile"
+                android:layout_centerInParent="true"/>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </FrameLayout>

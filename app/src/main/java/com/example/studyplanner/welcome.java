@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-public class welcome extends AppCompatActivity implements View.OnClickListener {
+public class welcome extends AppCompatActivity  {
 
     public CardView bridge;
 
@@ -16,21 +16,20 @@ public class welcome extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome_page);
 
-        bridge = (CardView) findViewById(R.id.lsbridge);
-        bridge.setOnClickListener(this);
+        CardView btn_welcome=findViewById(R.id.lsbridge);
 
 
+        btn_welcome.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                openactivity_login();
+            }
+        });
 
+
+    }public  void  openactivity_login(){
+        Intent intent = new Intent(this, login.class);
+        startActivity(intent);
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent intent;
-
-        if(v.getId() == R.id.lsbridge){
-            intent = new Intent(this, login.class);
-            startActivity(intent);
-        }
-
-    }
 }
