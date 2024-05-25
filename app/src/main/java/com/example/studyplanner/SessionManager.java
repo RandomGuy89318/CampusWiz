@@ -1,6 +1,7 @@
 package com.example.studyplanner;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 
 public class SessionManager {
@@ -34,5 +35,15 @@ public class SessionManager {
 
     public boolean getRememberMe() {
         return sharedPreferences.getBoolean(KEY_REMEMBER_ME, false);
+    }
+    public void logout() {
+        // Clear user data from SharedPreferences
+        editor.clear();
+        editor.apply();
+
+        // Redirect user to login activity
+        Intent intent = new Intent(context, login.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        context.startActivity(intent);
     }
 }

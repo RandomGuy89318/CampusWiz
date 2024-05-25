@@ -17,14 +17,11 @@ import android.view.ViewGroup;
  */
 public class mdisp_frag extends Fragment {
 
-    private AppCompatButton verify_btn;
+    private AppCompatButton verify_btn, logout_btn;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -32,14 +29,6 @@ public class mdisp_frag extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment mdisp.
-     */
     public static mdisp_frag newInstance(String param1, String param2) {
         mdisp_frag fragment = new mdisp_frag();
         Bundle args = new Bundle();
@@ -64,10 +53,11 @@ public class mdisp_frag extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_mdisp, container, false);
 
-        // Initialize the button
+        // Initialize the buttons
         verify_btn = view.findViewById(R.id.verify);
+        logout_btn = view.findViewById(R.id.logout);
 
-        // Set the click listener for the button
+        // Set click listeners for the buttons
         verify_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +65,21 @@ public class mdisp_frag extends Fragment {
             }
         });
 
+        logout_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logoutButtonClick(v); // Pass the View argument
+            }
+        });
+
         return view;
+    }
+
+    // Use the View parameter
+    public void logoutButtonClick(View view) {
+        // Call the logout function here
+        SessionManager sessionManager = new SessionManager(getContext()); // Use getContext()
+        sessionManager.logout();
     }
 
     public void openactivity_faverify() {

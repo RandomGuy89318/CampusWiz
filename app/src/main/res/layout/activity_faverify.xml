@@ -55,32 +55,28 @@
                    android:textStyle="bold"/>
 
                <LinearLayout
-                   android:layout_gravity="center_horizontal"
-                   android:layout_marginTop="20dp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_marginTop="20dp"
                    android:orientation="vertical">
 
 
                    <TextView
-                       android:layout_gravity="center_horizontal"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:layout_gravity="center_horizontal"
                        android:text="We have send you 6 Digit Verification Code on your Email"
-                       android:textStyle="bold"
-                       />
+                       android:textStyle="bold" />
 
                    <TextView
                        android:id="@+id/mail"
-                       android:layout_marginTop="10dp"
-                       android:layout_gravity="center_horizontal"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:visibility="gone"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_marginTop="10dp"
                        android:textStyle="bold"
-                       />
-
-
+                       android:visibility="gone" />
 
 
                </LinearLayout>
